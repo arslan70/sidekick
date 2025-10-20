@@ -1,0 +1,78 @@
+# AgentCore Configuration for AWS Deployment
+# This file configures the agent runtime environment for AWS deployment
+# Reference: https://docs.aws.amazon.com/bedrock/latest/userguide/agents-runtime.html
+
+version: "1.0"
+
+agent:
+  name: "DailyPlannerOrchestrator"
+  description: "AI assistant that helps users plan their day by coordinating calendar, tasks, and knowledge"
+  runtime: "python3.11"
+  
+  # Agent configuration
+  config:
+    # Bedrock model configuration
+    model:
+      id: "us.eu.amazon.nova-pro-v1:0"
+      region: "eu-central-1"
+      temperature: 0.7
+      max_tokens: 2048
+    
+    # Streaming configuration
+    streaming:
+      enabled: true
+      chunk_size: 50
+    
+    # Session management
+    session:
+      timeout: 3600  # 1 hour
+      max_history: 10  # Keep last 10 messages
+    
+    # Logging
+    logging:
+      level: "INFO"
+      format: "json"
+  
+  # Worker agents
+  # Note: Workers automatically detect available credentials and use real APIs
+  # when configured, falling back to static demo data when credentials are missing.
+  workers:
+    - name: "CalendarWorker"
+      type: "python"
+      module: "agents.worker_calendar"
+      factory: "create_calendar_worker_agent"
+      config: {}
+    
+    - name: "KBWorker"
+      type: "python"
+      module: "agents.worker_kb"
+      factory: "create_kb_worker_agent"
+      config:
+        kb_id: "${KNOWLEDGE_BASE_ID}"
+        max_results: 5
+
+# Environment variables (loaded from SSM/Secrets)
+# Note: The system automatically detects which services have credentials configured
+# and uses real APIs when available, falling back to static data otherwise.
+environment:
+  AWS_REGION: "${AWS_REGION}"
+  KNOWLEDGE_BASE_ID: "${KNOWLEDGE_BASE_ID}"
+  BEDROCK_MODEL_ID: "${BEDROCK_MODEL_ID}"
+  ATLASSIAN_MCP_URL: "${ATLASSIAN_MCP_URL}"
+
+# Health check configuration
+health:
+  endpoint: "/health"
+  interval: 30
+  timeout: 10
+  unhealthy_threshold: 3
+
+# Metrics configuration
+metrics:
+  enabled: true
+  namespace: "DailyPlanner"
+  dimensions:
+    - name: "Environment"
+      value: "${ENVIRONMENT}"
+    - name: "Agent"
+      value: "Orchestrator"

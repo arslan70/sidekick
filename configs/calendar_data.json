@@ -1,0 +1,67 @@
+{
+  "events": [
+    {
+      "title": "Sprint Planning - Team Phoenix",
+      "start": "2025-10-19T09:00:00",
+      "end": "2025-10-19T10:30:00",
+      "attendees": [
+        "sarah.chen@acmecorp.com",
+        "dev-team@acmecorp.com",
+        "product@acmecorp.com"
+      ],
+      "location": "Conference Room A",
+      "description": "Sprint 13 planning: OAuth implementation, database optimization, and CI/CD improvements. Review backlog and commit to sprint goals.",
+      "priority": "High"
+    },
+    {
+      "title": "Architecture Review - Security Enhancements",
+      "start": "2025-10-19T14:00:00",
+      "end": "2025-10-19T15:00:00",
+      "attendees": [
+        "sarah.chen@acmecorp.com",
+        "tech-leads@acmecorp.com",
+        "security@acmecorp.com"
+      ],
+      "location": "Virtual - Zoom",
+      "description": "Review OAuth 2.0 implementation design (ENG-123). Security team sign-off required before production deployment.",
+      "priority": "High"
+    },
+    {
+      "title": "1:1 with CTO - Q4 Planning",
+      "start": "2025-10-19T11:00:00",
+      "end": "2025-10-19T11:30:00",
+      "attendees": [
+        "sarah.chen@acmecorp.com",
+        "cto@acmecorp.com"
+      ],
+      "location": "CTO Office",
+      "description": "Discuss Q4 engineering priorities, budget approval status, and team expansion plans.",
+      "priority": "Medium"
+    },
+    {
+      "title": "Incident Post-Mortem - INC-001",
+      "start": "2025-10-19T16:00:00",
+      "end": "2025-10-19T17:00:00",
+      "attendees": [
+        "sarah.chen@acmecorp.com",
+        "devops@acmecorp.com",
+        "sre@acmecorp.com"
+      ],
+      "location": "Conference Room B",
+      "description": "Review production outage from Oct 3. Discuss root cause, preventive measures, and action items to improve failover mechanisms.",
+      "priority": "High"
+    },
+    {
+      "title": "Team Lunch - Welcome New Hires",
+      "start": "2025-10-19T12:30:00",
+      "end": "2025-10-19T13:30:00",
+      "attendees": [
+        "sarah.chen@acmecorp.com",
+        "engineering-team@acmecorp.com"
+      ],
+      "location": "Mario's Italian Restaurant",
+      "description": "Welcome lunch for 3 new DevOps engineers joining the team this week.",
+      "priority": "Low"
+    }
+  ]
+}

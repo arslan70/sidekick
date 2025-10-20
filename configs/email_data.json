@@ -1,0 +1,92 @@
+{
+  "emails": [
+    {
+      "id": "email-001",
+      "subject": "URGENT: Q4 Budget Approval Needed by EOD",
+      "sender": "cfo@acmecorp.com",
+      "timestamp": "2025-10-03T09:15:00",
+      "body": "Hi Team,\n\nWe need to finalize the Q4 budget today. Please review the budget breakdown below and provide your approvals.\n\n=== Q4 2025 BUDGET REQUEST ===\n\nDEPARTMENT: Engineering & Product Development\nTOTAL REQUEST: $2,850,000\n\n--- Personnel Costs ($1,950,000) ---\n• Engineering Team Salaries: $1,200,000\n  - 15 Senior Engineers @ $200k = $750,000\n  - 10 Mid-level Engineers @ $140k = $350,000\n  - 5 Junior Engineers @ $100k = $125,000\n  - Benefits & Payroll Taxes (25%): $300,000\n\n• New Hires (Q4): $450,000\n  - 3 Senior DevOps Engineers @ $210k = $157,500\n  - 2 Security Engineers @ $195k = $97,500\n  - 4 Frontend Developers @ $155k = $155,000\n  - Recruiting Fees (15%): $40,000\n\n• Contractor & Consultant Fees: $300,000\n  - Cloud Migration Consultants: $150,000\n  - Security Audit Team: $100,000\n  - Performance Optimization Specialists: $50,000\n\n--- Infrastructure & Tools ($650,000) ---\n• Cloud Services (AWS): $380,000\n  - EC2 & Compute: $180,000\n  - RDS & Database: $95,000\n  - S3 & Storage: $45,000\n  - CloudFront CDN: $35,000\n  - Other Services: $25,000\n\n• Software Licenses & SaaS: $195,000\n  - GitHub Enterprise: $45,000\n  - Atlassian Suite (Jira/Confluence): $35,000\n  - Monitoring Tools (DataDog, New Relic): $55,000\n  - Development Tools (IDEs, CI/CD): $40,000\n  - Security Tools: $20,000\n\n• Hardware & Equipment: $75,000\n  - Developer Workstations (20 laptops): $60,000\n  - Test Devices & Lab Equipment: $15,000\n\n--- Development Projects ($200,000) ---\n• Mobile App Redesign: $85,000\n• API Gateway Upgrade: $60,000\n• Security Enhancements: $35,000\n• Performance Optimization: $20,000\n\n--- Training & Development ($50,000) ---\n• Technical Training & Certifications: $30,000\n• Conference Attendance: $15,000\n• Online Learning Platforms: $5,000\n\n=== COMPARISON TO Q3 ===\nQ3 2025 Budget: $2,450,000\nQ4 2025 Request: $2,850,000\nIncrease: $400,000 (+16.3%)\n\nJUSTIFICATION FOR INCREASE:\n- New hires to support Product Roadmap 2026\n- Cloud infrastructure scaling for 40% user growth\n- Security improvements post-incident INC-001\n- Mobile app platform expansion (iOS 17 support)\n\n=== ACTION REQUIRED ===\n- Review budget breakdown above\n- Submit approval by 5 PM today (October 3, 2025)\n- Schedule follow-up meeting if concerns\n- Respond with \"APPROVED\" or specific line items for discussion\n\nDeadline: October 3, 2025 (TODAY - 5 PM)\n\nPlease note: Delayed approval will impact Q4 hiring timeline and infrastructure provisioning.\n\nThanks,\nSarah Chen\nChief Financial Officer\nAcme Corporation",
+      "is_urgent": true
+    },
+    {
+      "id": "email-002",
+      "subject": "Project Phoenix - Milestone 3 Delayed",
+      "sender": "pm@acmecorp.com",
+      "timestamp": "2025-10-03T08:30:00",
+      "body": "Team,\n\nUnfortunately, Milestone 3 of Project Phoenix will be delayed by 2 weeks due to resource constraints.\n\nAction items:\n- Update project timeline\n- Notify stakeholders\n- Reschedule sprint planning for next Monday\n\nLet me know if you have questions.\n\nBest,\nMike",
+      "is_urgent": false
+    },
+    {
+      "id": "email-003",
+      "subject": "RE: Client Meeting Notes - Action Items",
+      "sender": "sales@acmecorp.com",
+      "timestamp": "2025-10-03T07:45:00",
+      "body": "Hi,\n\nFollowing up from yesterday's client meeting with TechCorp:\n\nAction:\n- Prepare proposal document by Friday, October 6\n- Schedule demo for next week\n- Send pricing options to client\n\nClient is interested in our Enterprise package. Let's move quickly on this opportunity.\n\nRegards,\nJennifer",
+      "is_urgent": true
+    },
+    {
+      "id": "email-004",
+      "subject": "Team Lunch - Friday 12:30 PM",
+      "sender": "hr@acmecorp.com",
+      "timestamp": "2025-10-02T16:20:00",
+      "body": "Hello everyone,\n\nWe're organizing a team lunch this Friday at 12:30 PM at Mario's Italian Restaurant.\n\nPlease RSVP by Wednesday so we can make a reservation.\n\nLooking forward to seeing you all there!\n\nCheers,\nEmily",
+      "is_urgent": false
+    },
+    {
+      "id": "email-005",
+      "subject": "Security Alert: Password Reset Required",
+      "sender": "security@acmecorp.com",
+      "timestamp": "2025-10-02T14:10:00",
+      "body": "URGENT SECURITY NOTICE\n\nDue to recent security updates, all employees must reset their passwords within 48 hours.\n\nAction:\n- Log into the employee portal\n- Navigate to Security Settings\n- Update your password\n- Enable two-factor authentication\n\nDeadline: October 4, 2025\n\nFailure to comply will result in account suspension.\n\nIT Security Team",
+      "is_urgent": true
+    },
+    {
+      "id": "email-006",
+      "subject": "Quarterly All-Hands Meeting - Oct 15",
+      "sender": "ceo@acmecorp.com",
+      "timestamp": "2025-10-01T11:00:00",
+      "body": "Dear Team,\n\nI'm excited to announce our Quarterly All-Hands meeting on October 15 at 2 PM.\n\nAgenda:\n- Q3 Results Review\n- Q4 Strategy Announcement\n- New Product Launch Preview\n- Team Recognition Awards\n\nMeeting will be hybrid (in-person and virtual). Calendar invite to follow.\n\nBest regards,\nRobert",
+      "is_urgent": false
+    },
+    {
+      "id": "email-007",
+      "subject": "Code Review Request - PR #342",
+      "sender": "dev@acmecorp.com",
+      "timestamp": "2025-10-01T09:30:00",
+      "body": "Hi,\n\nI've submitted PR #342 for the new authentication feature. Could you please review when you have a chance?\n\nChanges include:\n- OAuth2 integration\n- JWT token handling\n- Session management improvements\n\nAction: Please review and approve by end of week\n\nThanks!\nAlex",
+      "is_urgent": false
+    },
+    {
+      "id": "email-008",
+      "subject": "URGENT: Production Server Down",
+      "sender": "ops@acmecorp.com",
+      "timestamp": "2025-10-03T06:00:00",
+      "body": "CRITICAL ALERT\n\nProduction server EU-WEST-1 is currently down. We're investigating the issue.\n\nAction Required:\n- All hands on deck for troubleshooting\n- Join war room on Slack #incident-2025-10-03\n- Update status page every 15 minutes\n\nETA for resolution: 2 hours\n\nDevOps Team",
+      "is_urgent": true
+    },
+    {
+      "id": "email-009",
+      "subject": "Monthly Newsletter - October 2025",
+      "sender": "marketing@acmecorp.com",
+      "timestamp": "2025-10-01T08:00:00",
+      "body": "Welcome to the October Newsletter!\n\nThis month's highlights:\n- New product features\n- Customer success stories\n- Upcoming events and webinars\n- Employee spotlight\n\nRead the full newsletter at our internal portal.\n\nHappy October!\nMarketing Team",
+      "is_urgent": false
+    },
+    {
+      "id": "email-010",
+      "subject": "Contract Renewal - Action Needed",
+      "sender": "vendor@supplycorp.com",
+      "timestamp": "2025-10-02T10:15:00",
+      "body": "Dear Partner,\n\nYour annual software license agreement is expiring on October 31, 2025.\n\nAction required:\n- Review renewal terms (attached)\n- Approve or request modifications\n- Return signed contract by October 20\n\nDeadline: October 20, 2025\n\nPlease contact us if you have any questions.\n\nBest regards,\nSupplyCorp Licensing Team",
+      "is_urgent": false
+    },
+    {
+      "id": "email-011",
+      "subject": "Q3 2025 Sales Report - Due Today",
+      "sender": "director@acmecorp.com",
+      "timestamp": "2025-10-02T14:30:00",
+      "body": "Hi Team,\n\nWe need to finalize and send the Q3 2025 quarterly sales report to the executive committee by tomorrow morning.\n\nAction items:\n- Compile final sales figures from all regions\n- Include year-over-year comparison with Q3 2024\n- Add analysis of top performing products\n- Send report to exec-committee@acmecorp.com by 9 AM tomorrow (October 8)\n\nPlease use the company standard sales report template (attached) and populate all required fields according to the template. Ensure the following areas from the standard template are completed: Executive Summary; Regional Sales Breakdown; Product Performance Analysis; Customer Acquisition Metrics; Revenue vs. Target Analysis; Key Challenges and Opportunities; Q4 Forecast and Recommendations.\n\n=== DATA SOURCES ===\n- Salesforce CRM exports\n- Financial system reports\n- Customer success team input\n- Marketing campaign performance data\n\nPlease coordinate with the following stakeholders:\n- Sarah (Finance) for revenue validation\n- Mike (Sales Ops) for territory breakdowns\n- Jennifer (Customer Success) for retention metrics\n\nDeadline: October 8, 2025 - 9:00 AM\n\nThis is critical for the board meeting next week. Please confirm receipt and expected completion time.\n\nThanks,\nDavid Chen\nSales Director",
+      "is_urgent": true
+    }
+  ]
+}

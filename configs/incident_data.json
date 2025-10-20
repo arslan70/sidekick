@@ -1,0 +1,65 @@
+{
+  "incidents": [
+    {
+      "id": "INC-2025-5001",
+      "title": "File Upload Failures - S3 Permission Denied",
+      "status": "Investigating",
+      "severity": "High",
+      "impact": "Users unable to upload files. Approximately 500+ users affected. Upload API returning 403 Forbidden errors.",
+      "affected_services": [
+        "File Upload Service",
+        "S3 Storage Backend (acmecorp-uploads)",
+        "User Document Management"
+      ],
+      "assigned_to": "Platform Engineering - SRE",
+      "reported_by": "monitoring@acmecorp.com",
+      "reported_at": "2025-10-19T09:15:00",
+      "resolved_at": null,
+      "description": "File upload service experiencing 403 Forbidden errors when attempting to upload files to S3 bucket 'acmecorp-uploads'. CloudWatch logs show 'Access Denied' errors. Issue started at 09:15 UTC. Users reporting inability to upload documents.",
+      "root_cause": "Under investigation - error logs show S3 access denied but cause not yet determined",
+      "resolution": null,
+      "timeline": [
+        "09:15 - Upload failures detected by monitoring",
+        "09:17 - Automatic alerts sent to platform team",
+        "09:20 - War room established on Slack #incident-2025-5001",
+        "09:22 - CloudWatch logs show 403 Forbidden errors from S3",
+        "09:25 - Verified S3 bucket exists and service is running",
+        "09:30 - Checking for recent deployments or configuration changes",
+        "09:35 - Current status: investigating cause of access denied errors"
+      ],
+      "related_email_id": null,
+      "runbook_links": [
+        "S3 Permissions Troubleshooting",
+        "File Upload Service Runbook"
+      ]
+    },
+    {
+      "id": "INC-004",
+      "title": "Storage Quota Exceeded - File Upload Service",
+      "status": "Resolved",
+      "severity": "Low",
+      "impact": "Users unable to upload new files for 15 minutes. Approximately 50 users affected. No data loss.",
+      "affected_services": [
+        "File Upload Service",
+        "S3 Storage Backend"
+      ],
+      "assigned_to": "Platform Engineering",
+      "reported_by": "platform@acmecorp.com",
+      "reported_at": "2025-10-01T11:20:00",
+      "resolved_at": "2025-10-01T11:45:00",
+      "description": "File upload service reached storage quota limit of 5TB. S3 bucket lifecycle policies were not configured correctly, preventing automatic deletion of old temporary files.",
+      "root_cause": "S3 bucket lifecycle policy misconfiguration. Temporary files older than 30 days were not being automatically deleted as designed. This caused gradual storage accumulation until quota was exceeded.",
+      "resolution": "Corrected S3 lifecycle policy configuration. Manually deleted expired temporary files (2.5TB). Increased quota to 10TB with auto-scaling enabled. Added proactive monitoring alerts at 75% and 90% capacity thresholds.",
+      "timeline": [
+        "11:20 - Upload failures detected",
+        "11:25 - Root cause identified (quota exceeded)",
+        "11:30 - Emergency cleanup of temp files initiated",
+        "11:35 - 1TB of temp files deleted",
+        "11:40 - Service functionality restored",
+        "11:45 - Incident resolved",
+        "12:00 - Post-mortem completed"
+      ],
+      "related_email_id": null
+    }
+  ]
+}

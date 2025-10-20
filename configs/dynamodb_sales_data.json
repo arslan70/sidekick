@@ -1,0 +1,74 @@
+[
+  {
+    "sale_id": "SALE-2025-Q3-001",
+    "date": "2025-07-15T14:30:00",
+    "customer": "TechStart Inc",
+    "product": "Enterprise AI Suite - Annual License",
+    "amount": 487500.00,
+    "region": "North America",
+    "sales_rep": "Mike Rodriguez"
+  },
+  {
+    "sale_id": "SALE-2025-Q3-002",
+    "date": "2025-08-03T10:15:00",
+    "customer": "Global Finance Corp",
+    "product": "Cloud Analytics Platform - 3-Year Contract",
+    "amount": 1250000.00,
+    "region": "EMEA",
+    "sales_rep": "Sarah Mitchell"
+  },
+  {
+    "sale_id": "SALE-2025-Q3-003",
+    "date": "2025-08-22T16:45:00",
+    "customer": "Retail Innovations Ltd",
+    "product": "Customer Insights Dashboard - Professional",
+    "amount": 125000.00,
+    "region": "APAC",
+    "sales_rep": "Kevin Tanaka"
+  },
+  {
+    "sale_id": "SALE-2025-Q3-004",
+    "date": "2025-09-10T11:00:00",
+    "customer": "Manufacturing Solutions GmbH",
+    "product": "Predictive Maintenance AI - Enterprise",
+    "amount": 625000.00,
+    "region": "EMEA",
+    "sales_rep": "Sarah Mitchell"
+  },
+  {
+    "sale_id": "SALE-2025-Q3-005",
+    "date": "2025-09-28T09:30:00",
+    "customer": "Healthcare Systems Alliance",
+    "product": "Medical Data Analytics Suite - 5-Year",
+    "amount": 2100000.00,
+    "region": "North America",
+    "sales_rep": "Mike Rodriguez"
+  },
+  {
+    "sale_id": "SALE-2025-Q3-006",
+    "date": "2025-07-28T13:20:00",
+    "customer": "E-Commerce Platform Inc",
+    "product": "Recommendation Engine API - Starter",
+    "amount": 45000.00,
+    "region": "North America",
+    "sales_rep": "Jennifer Lopez"
+  },
+  {
+    "sale_id": "SALE-2025-Q3-007",
+    "date": "2025-08-15T15:10:00",
+    "customer": "Smart City Ventures",
+    "product": "IoT Analytics Platform - Municipal",
+    "amount": 875000.00,
+    "region": "APAC",
+    "sales_rep": "Kevin Tanaka"
+  },
+  {
+    "sale_id": "SALE-2025-Q3-008",
+    "date": "2025-09-05T14:00:00",
+    "customer": "Financial Services Group",
+    "product": "Fraud Detection AI - Premium",
+    "amount": 450000.00,
+    "region": "EMEA",
+    "sales_rep": "Sarah Mitchell"
+  }
+]

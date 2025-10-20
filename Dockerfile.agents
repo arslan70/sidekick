@@ -1,0 +1,53 @@
+# Dockerfile for SideKick AI Agents Container
+# Platform: linux/arm64 for AWS Graviton processors
+# This container packages all agent implementations for Bedrock AgentCore
+
+# Use Python ARM64 base image
+FROM --platform=linux/arm64 python:3.11-slim
+
+WORKDIR /app
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PYTHONPATH="/app"
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements file
+COPY requirements.txt .
+
+# Install Python dependencies
+# Ensure strands, boto3, bedrock-agentcore, uvicorn and all required packages are installed
+RUN pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir uvicorn[standard]
+
+# Copy source code
+COPY agent_runtime.py .
+COPY agents/ ./agents/
+COPY tools/ ./tools/
+COPY configs/ ./configs/
+
+# Set default environment variables for agent configuration
+# These can be overridden at runtime by AgentCore
+ENV BYPASS_TOOL_CONSENT=true \
+    BEDROCK_MODEL_ID=eu.amazon.nova-pro-v1:0 \
+    AWS_REGION=eu-central-1 \
+    STRANDS_LOG_LEVEL=INFO
+
+# Expose port for AgentCore to connect
+EXPOSE 8080
+
+# Note: This container is designed to be invoked by AWS Bedrock AgentCore
+# The agent_runtime.py module provides the @app.entrypoint for AgentCore integration
+# BedrockAgentCoreApp creates a uvicorn/ASGI server that AgentCore connects to via HTTP
+
+# Start the AgentCore app server with uvicorn wrapped in OpenTelemetry instrumentation
+# OpenTelemetry is required for AgentCore to capture logs and send them to CloudWatch
+# This runs the BedrockAgentCoreApp as a web server on port 8080
+CMD ["opentelemetry-instrument", "uvicorn", "agent_runtime:app", "--host", "0.0.0.0", "--port", "8080", "--log-level", "info", "--access-log", "--no-use-colors"]

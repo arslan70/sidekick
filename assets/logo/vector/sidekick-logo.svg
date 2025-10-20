@@ -1,0 +1,73 @@
+<svg width="2000" height="500" viewBox="0 0 2000 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9900;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF7700;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0055AA;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7B3FF2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6B2FE2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Central Orchestrator Node -->
+  <circle cx="250" cy="250" r="60" fill="url(#orangeGradient)" opacity="0.9"/>
+  <circle cx="250" cy="250" r="45" fill="#FFFFFF" opacity="0.3"/>
+  <text x="250" y="265" font-family="Inter, sans-serif" font-size="36" font-weight="700" fill="#FFFFFF" text-anchor="middle">O</text>
+  
+  <!-- Worker Nodes (7 workers arranged in circle) -->
+  <!-- Worker 1 - Top -->
+  <circle cx="250" cy="100" r="35" fill="url(#blueGradient)" opacity="0.85"/>
+  <line x1="250" y1="190" x2="250" y2="135" stroke="#0066CC" stroke-width="3" opacity="0.6"/>
+  <text x="250" y="112" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Worker 2 - Top Right -->
+  <circle cx="380" cy="150" r="35" fill="url(#blueGradient)" opacity="0.85"/>
+  <line x1="295" y1="210" x2="350" y2="175" stroke="#0066CC" stroke-width="3" opacity="0.6"/>
+  <text x="380" y="162" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Worker 3 - Right -->
+  <circle cx="420" cy="250" r="35" fill="url(#blueGradient)" opacity="0.85"/>
+  <line x1="310" y1="250" x2="385" y2="250" stroke="#0066CC" stroke-width="3" opacity="0.6"/>
+  <text x="420" y="262" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Worker 4 - Bottom Right -->
+  <circle cx="380" cy="350" r="35" fill="url(#blueGradient)" opacity="0.85"/>
+  <line x1="295" y1="290" x2="350" y2="325" stroke="#0066CC" stroke-width="3" opacity="0.6"/>
+  <text x="380" y="362" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Worker 5 - Bottom -->
+  <circle cx="250" cy="400" r="35" fill="url(#blueGradient)" opacity="0.85"/>
+  <line x1="250" y1="310" x2="250" y2="365" stroke="#0066CC" stroke-width="3" opacity="0.6"/>
+  <text x="250" y="412" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Worker 6 - Bottom Left -->
+  <circle cx="120" cy="350" r="35" fill="url(#blueGradient)" opacity="0.85"/>
+  <line x1="205" y1="290" x2="150" y2="325" stroke="#0066CC" stroke-width="3" opacity="0.6"/>
+  <text x="120" y="362" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Worker 7 - Left -->
+  <circle cx="80" cy="250" r="35" fill="url(#blueGradient)" opacity="0.85"/>
+  <line x1="190" y1="250" x2="115" y2="250" stroke="#0066CC" stroke-width="3" opacity="0.6"/>
+  <text x="80" y="262" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Worker 8 - Top Left -->
+  <circle cx="120" cy="150" r="35" fill="url(#blueGradient)" opacity="0.85"/>
+  <line x1="205" y1="210" x2="150" y2="175" stroke="#0066CC" stroke-width="3" opacity="0.6"/>
+  <text x="120" y="162" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Brand Text -->
+  <text x="550" y="220" font-family="Inter, sans-serif" font-size="120" font-weight="800" fill="#0066CC">SideKick</text>
+  <text x="550" y="310" font-family="Inter, sans-serif" font-size="60" font-weight="400" fill="#7B3FF2" opacity="0.9">AI</text>
+  
+  <!-- Tagline -->
+  <text x="550" y="360" font-family="Inter, sans-serif" font-size="28" font-weight="300" fill="#666666" opacity="0.8">Hierarchical Multi-Agent Assistant</text>
+  
+  <!-- AWS Badge -->
+  <rect x="550" y="380" width="180" height="35" rx="5" fill="#FF9900" opacity="0.15"/>
+  <text x="560" y="405" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#FF9900">Built with AWS</text>
+</svg>

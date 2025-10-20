@@ -1,0 +1,13 @@
+# Development dependencies for code quality tools
+# Install with: pip install -r scripts/requirements-dev.txt
+
+# Code formatters
+black==24.10.0
+isort==5.13.2
+
+# Linters
+flake8==7.1.1
+
+# Optional: Additional linting tools
+# pylint==3.2.7
+# mypy==1.11.2

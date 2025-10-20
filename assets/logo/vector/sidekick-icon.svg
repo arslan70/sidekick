@@ -1,0 +1,61 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9900;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF7700;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0055AA;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle for better visibility -->
+  <circle cx="256" cy="256" r="240" fill="#FFFFFF" opacity="0.1"/>
+  
+  <!-- Central Orchestrator Node -->
+  <circle cx="256" cy="256" r="70" fill="url(#orangeGradient)"/>
+  <circle cx="256" cy="256" r="55" fill="#FFFFFF" opacity="0.3"/>
+  <text x="256" y="280" font-family="Inter, sans-serif" font-size="48" font-weight="700" fill="#FFFFFF" text-anchor="middle">O</text>
+  
+  <!-- Worker Nodes (7 workers arranged in circle) -->
+  <!-- Worker 1 - Top -->
+  <circle cx="256" cy="80" r="40" fill="url(#blueGradient)"/>
+  <line x1="256" y1="186" x2="256" y2="120" stroke="#0066CC" stroke-width="4" opacity="0.6"/>
+  <text x="256" y="95" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Worker 2 - Top Right -->
+  <circle cx="410" cy="145" r="40" fill="url(#blueGradient)"/>
+  <line x1="310" y1="215" x2="375" y2="170" stroke="#0066CC" stroke-width="4" opacity="0.6"/>
+  <text x="410" y="160" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Worker 3 - Right -->
+  <circle cx="432" cy="256" r="40" fill="url(#blueGradient)"/>
+  <line x1="326" y1="256" x2="392" y2="256" stroke="#0066CC" stroke-width="4" opacity="0.6"/>
+  <text x="432" y="271" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Worker 4 - Bottom Right -->
+  <circle cx="410" cy="367" r="40" fill="url(#blueGradient)"/>
+  <line x1="310" y1="297" x2="375" y2="342" stroke="#0066CC" stroke-width="4" opacity="0.6"/>
+  <text x="410" y="382" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Worker 5 - Bottom -->
+  <circle cx="256" cy="432" r="40" fill="url(#blueGradient)"/>
+  <line x1="256" y1="326" x2="256" y2="392" stroke="#0066CC" stroke-width="4" opacity="0.6"/>
+  <text x="256" y="447" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Worker 6 - Bottom Left -->
+  <circle cx="102" cy="367" r="40" fill="url(#blueGradient)"/>
+  <line x1="202" y1="297" x2="137" y2="342" stroke="#0066CC" stroke-width="4" opacity="0.6"/>
+  <text x="102" y="382" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Worker 7 - Left -->
+  <circle cx="80" cy="256" r="40" fill="url(#blueGradient)"/>
+  <line x1="186" y1="256" x2="120" y2="256" stroke="#0066CC" stroke-width="4" opacity="0.6"/>
+  <text x="80" y="271" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+  
+  <!-- Worker 8 - Top Left -->
+  <circle cx="102" cy="145" r="40" fill="url(#blueGradient)"/>
+  <line x1="202" y1="215" x2="137" y2="170" stroke="#0066CC" stroke-width="4" opacity="0.6"/>
+  <text x="102" y="160" font-family="Inter, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF" text-anchor="middle">W</text>
+</svg>

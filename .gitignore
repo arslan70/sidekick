@@ -1,0 +1,132 @@
+# Github Copilot
+.github/chatmodes/
+.github/prompts/
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# Environment variables
+.env
+*.env
+!.env.sample
+.env.local
+.env.*.local
+
+# AWS Credentials and Config
+.aws/
+*.pem
+*.key
+*.crt
+*credentials*
+*config.json
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# AWS CDK
+infra/cdk.out/
+infra/.cdk.staging/
+infra/cdk.context.json
+cdk.out/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.cache
+*.cover
+.hypothesis/
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Chainlit
+.chainlit/
+.files/
+chainlit.db
+# Note: chainlit.toml is tracked (configuration file)
+
+# Docker
+*.dockerignore
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Node.js (for CDK CLI)
+node_modules/
+package-lock.json
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+
+# Secrets and sensitive data
+secrets/
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Data files (may contain sensitive info)
+data/
+*.sqlite
+*.db
+
+# Build artifacts
+*.tar.gz
+*.zip
+*.pyc
+
+# IDE-specific
+.vscode/settings.json
+.idea/workspace.xml
+.kiro/**

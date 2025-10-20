@@ -1,0 +1,373 @@
+{
+  "ec2_instances": [
+    {
+      "instance_id": "i-0abc123def456789",
+      "instance_type": "m5.2xlarge",
+      "state": "running",
+      "launch_time": "2025-01-15T10:30:00Z",
+      "availability_zone": "us-east-1a",
+      "tags": {
+        "Name": "api-server-prod-1",
+        "Environment": "production",
+        "Project": "api-gateway",
+        "CostCenter": "engineering"
+      },
+      "metrics": {
+        "avg_cpu_utilization_7d": 15.3,
+        "avg_memory_utilization_7d": 32.1,
+        "avg_network_in_7d": 125.5,
+        "avg_network_out_7d": 89.2
+      },
+      "monthly_cost": 280.32,
+      "underutilized": true,
+      "recommendation": "Downgrade to m5.large",
+      "potential_savings": 140.16
+    },
+    {
+      "instance_id": "i-0def456ghi789012",
+      "instance_type": "m5.2xlarge",
+      "state": "running",
+      "launch_time": "2025-01-15T10:35:00Z",
+      "availability_zone": "us-east-1b",
+      "tags": {
+        "Name": "api-server-prod-2",
+        "Environment": "production",
+        "Project": "api-gateway",
+        "CostCenter": "engineering"
+      },
+      "metrics": {
+        "avg_cpu_utilization_7d": 18.7,
+        "avg_memory_utilization_7d": 35.8,
+        "avg_network_in_7d": 132.1,
+        "avg_network_out_7d": 95.3
+      },
+      "monthly_cost": 280.32,
+      "underutilized": true,
+      "recommendation": "Downgrade to m5.large",
+      "potential_savings": 140.16
+    },
+    {
+      "instance_id": "i-0ghi789jkl012345",
+      "instance_type": "c5.4xlarge",
+      "state": "running",
+      "launch_time": "2025-02-01T14:20:00Z",
+      "availability_zone": "us-east-1a",
+      "tags": {
+        "Name": "batch-processor-prod",
+        "Environment": "production",
+        "Project": "data-pipeline",
+        "CostCenter": "engineering"
+      },
+      "metrics": {
+        "avg_cpu_utilization_7d": 25.4,
+        "avg_memory_utilization_7d": 28.9,
+        "avg_network_in_7d": 450.2,
+        "avg_network_out_7d": 380.5
+      },
+      "monthly_cost": 520.80,
+      "underutilized": true,
+      "recommendation": "Downgrade to c5.xlarge or use Spot Instances",
+      "potential_savings": 390.60
+    },
+    {
+      "instance_id": "i-0jkl012mno345678",
+      "instance_type": "r5.xlarge",
+      "state": "running",
+      "launch_time": "2024-11-10T09:15:00Z",
+      "availability_zone": "us-east-1a",
+      "tags": {
+        "Name": "cache-server-prod",
+        "Environment": "production",
+        "Project": "api-gateway",
+        "CostCenter": "engineering"
+      },
+      "metrics": {
+        "avg_cpu_utilization_7d": 45.2,
+        "avg_memory_utilization_7d": 62.3,
+        "avg_network_in_7d": 890.5,
+        "avg_network_out_7d": 1250.8
+      },
+      "monthly_cost": 230.40,
+      "underutilized": false,
+      "recommendation": "Well-sized, consider Reserved Instance",
+      "potential_savings": 80.64
+    },
+    {
+      "instance_id": "i-0mno345pqr678901",
+      "instance_type": "t3.medium",
+      "state": "running",
+      "launch_time": "2025-03-05T11:45:00Z",
+      "availability_zone": "us-east-1b",
+      "tags": {
+        "Name": "dev-test-server",
+        "Environment": "development",
+        "Project": "testing",
+        "CostCenter": "engineering"
+      },
+      "metrics": {
+        "avg_cpu_utilization_7d": 8.5,
+        "avg_memory_utilization_7d": 15.2,
+        "avg_network_in_7d": 12.3,
+        "avg_network_out_7d": 8.7
+      },
+      "monthly_cost": 30.24,
+      "underutilized": true,
+      "recommendation": "Stop outside business hours (8 AM - 6 PM)",
+      "potential_savings": 18.14
+    }
+  ],
+  "s3_buckets": [
+    {
+      "bucket_name": "acmecorp-prod-data",
+      "region": "us-east-1",
+      "creation_date": "2023-05-10T08:00:00Z",
+      "storage_gb": 450.5,
+      "storage_class_breakdown": {
+        "STANDARD": 450.5,
+        "STANDARD_IA": 0,
+        "GLACIER_IR": 0,
+        "DEEP_ARCHIVE": 0
+      },
+      "monthly_cost": 10.36,
+      "access_pattern": "infrequent",
+      "last_accessed": "2025-08-15T14:30:00Z",
+      "recommendation": "Enable Intelligent-Tiering",
+      "potential_savings": 5.18
+    },
+    {
+      "bucket_name": "acmecorp-logs",
+      "region": "us-east-1",
+      "creation_date": "2023-01-20T10:00:00Z",
+      "storage_gb": 1250.8,
+      "storage_class_breakdown": {
+        "STANDARD": 1250.8,
+        "STANDARD_IA": 0,
+        "GLACIER_IR": 0,
+        "DEEP_ARCHIVE": 0
+      },
+      "monthly_cost": 28.77,
+      "access_pattern": "archive",
+      "last_accessed": "2025-02-10T09:15:00Z",
+      "recommendation": "Move to Glacier Instant Retrieval after 90 days",
+      "potential_savings": 23.77
+    },
+    {
+      "bucket_name": "acmecorp-backups",
+      "region": "us-east-1",
+      "creation_date": "2022-11-05T12:00:00Z",
+      "storage_gb": 3500.2,
+      "storage_class_breakdown": {
+        "STANDARD": 2100.1,
+        "STANDARD_IA": 800.3,
+        "GLACIER_IR": 599.8,
+        "DEEP_ARCHIVE": 0
+      },
+      "monthly_cost": 62.45,
+      "access_pattern": "archive",
+      "last_accessed": "2024-12-20T16:45:00Z",
+      "recommendation": "Move objects >365 days to Deep Archive",
+      "potential_savings": 38.50
+    }
+  ],
+  "rds_instances": [
+    {
+      "db_instance_identifier": "prod-db-primary",
+      "db_instance_class": "db.r5.2xlarge",
+      "engine": "postgres",
+      "engine_version": "14.7",
+      "availability_zone": "us-east-1a",
+      "multi_az": true,
+      "storage_type": "gp3",
+      "allocated_storage_gb": 500,
+      "tags": {
+        "Name": "production-database",
+        "Environment": "production",
+        "Project": "api-gateway",
+        "CostCenter": "engineering"
+      },
+      "metrics": {
+        "avg_cpu_utilization_7d": 35.8,
+        "avg_memory_utilization_7d": 48.2,
+        "avg_connections_7d": 150,
+        "max_connections": 5000,
+        "avg_iops_7d": 1250
+      },
+      "monthly_cost": 992.00,
+      "underutilized": true,
+      "recommendation": "Downgrade to db.r5.xlarge",
+      "potential_savings": 496.00
+    },
+    {
+      "db_instance_identifier": "dev-db",
+      "db_instance_class": "db.t3.large",
+      "engine": "postgres",
+      "engine_version": "14.7",
+      "availability_zone": "us-east-1b",
+      "multi_az": false,
+      "storage_type": "gp3",
+      "allocated_storage_gb": 100,
+      "tags": {
+        "Name": "development-database",
+        "Environment": "development",
+        "Project": "testing",
+        "CostCenter": "engineering"
+      },
+      "metrics": {
+        "avg_cpu_utilization_7d": 12.3,
+        "avg_memory_utilization_7d": 25.1,
+        "avg_connections_7d": 15,
+        "max_connections": 1000,
+        "avg_iops_7d": 250
+      },
+      "monthly_cost": 124.80,
+      "underutilized": true,
+      "recommendation": "Stop outside business hours or migrate to Aurora Serverless",
+      "potential_savings": 74.88
+    }
+  ],
+  "lambda_functions": [
+    {
+      "function_name": "data-processor",
+      "runtime": "python3.11",
+      "memory_mb": 128,
+      "timeout_seconds": 300,
+      "invocations_30d": 1250000,
+      "avg_duration_ms": 3000,
+      "avg_memory_used_mb": 95,
+      "monthly_cost": 45.50,
+      "recommendation": "Increase memory to 512 MB for faster execution",
+      "potential_savings": 2.73
+    },
+    {
+      "function_name": "api-handler",
+      "runtime": "nodejs18.x",
+      "memory_mb": 1024,
+      "timeout_seconds": 30,
+      "invocations_30d": 5000000,
+      "avg_duration_ms": 150,
+      "avg_memory_used_mb": 256,
+      "monthly_cost": 125.00,
+      "recommendation": "Reduce memory to 512 MB",
+      "potential_savings": 62.50
+    }
+  ],
+  "cloudwatch_alarms": [
+    {
+      "alarm_name": "high-cpu-api-server-1",
+      "metric_name": "CPUUtilization",
+      "namespace": "AWS/EC2",
+      "threshold": 80,
+      "state": "OK",
+      "dimensions": {
+        "InstanceId": "i-0abc123def456789"
+      }
+    },
+    {
+      "alarm_name": "high-db-connections",
+      "metric_name": "DatabaseConnections",
+      "namespace": "AWS/RDS",
+      "threshold": 4000,
+      "state": "OK",
+      "dimensions": {
+        "DBInstanceIdentifier": "prod-db-primary"
+      }
+    },
+    {
+      "alarm_name": "s3-bucket-size-warning",
+      "metric_name": "BucketSizeBytes",
+      "namespace": "AWS/S3",
+      "threshold": 5000000000000,
+      "state": "ALARM",
+      "dimensions": {
+        "BucketName": "acmecorp-backups",
+        "StorageType": "StandardStorage"
+      }
+    }
+  ],
+  "cost_summary": {
+    "current_month": "2025-10",
+    "total_cost_mtd": 4235.67,
+    "projected_month_end": 4850.00,
+    "last_month_total": 4120.35,
+    "breakdown_by_service": {
+      "EC2": 2847.50,
+      "S3": 892.15,
+      "RDS": 496.02,
+      "Lambda": 170.50,
+      "Data Transfer": 245.30,
+      "CloudWatch": 85.20,
+      "Other": 499.00
+    },
+    "breakdown_by_environment": {
+      "production": 3850.00,
+      "development": 285.67,
+      "staging": 100.00
+    },
+    "total_potential_savings": 1472.26,
+    "savings_percentage": 34.8
+  },
+  "optimization_recommendations": [
+    {
+      "priority": "High",
+      "category": "EC2 Right-Sizing",
+      "description": "Downsize 3 underutilized EC2 instances",
+      "affected_resources": [
+        "i-0abc123def456789",
+        "i-0def456ghi789012",
+        "i-0ghi789jkl012345"
+      ],
+      "monthly_savings": 670.92,
+      "implementation_effort": "Low",
+      "risk": "Low"
+    },
+    {
+      "priority": "High",
+      "category": "Reserved Instances",
+      "description": "Purchase 1-year Reserved Instances for steady-state workloads",
+      "affected_resources": [
+        "i-0jkl012mno345678",
+        "prod-db-primary"
+      ],
+      "monthly_savings": 576.64,
+      "implementation_effort": "Low",
+      "risk": "None"
+    },
+    {
+      "priority": "Medium",
+      "category": "S3 Storage Optimization",
+      "description": "Enable Intelligent-Tiering and lifecycle policies",
+      "affected_resources": [
+        "acmecorp-prod-data",
+        "acmecorp-logs",
+        "acmecorp-backups"
+      ],
+      "monthly_savings": 67.45,
+      "implementation_effort": "Low",
+      "risk": "None"
+    },
+    {
+      "priority": "Medium",
+      "category": "Development Resources",
+      "description": "Stop non-production resources outside business hours",
+      "affected_resources": [
+        "i-0mno345pqr678901",
+        "dev-db"
+      ],
+      "monthly_savings": 93.02,
+      "implementation_effort": "Medium",
+      "risk": "None"
+    },
+    {
+      "priority": "Low",
+      "category": "Lambda Optimization",
+      "description": "Optimize Lambda memory allocation",
+      "affected_resources": [
+        "data-processor",
+        "api-handler"
+      ],
+      "monthly_savings": 65.23,
+      "implementation_effort": "Medium",
+      "risk": "Low"
+    }
+  ]
+}

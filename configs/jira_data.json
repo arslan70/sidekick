@@ -1,0 +1,54 @@
+[
+  {
+    "key": "ENG-123",
+    "summary": "Implement OAuth 2.0 Authentication for Enterprise API",
+    "status": "In Progress",
+    "description": "Add OAuth 2.0 support to replace legacy API key authentication. This is blocking the TechStart Inc deal.\n\nAcceptance Criteria:\n- Support authorization code flow\n- Implement refresh token rotation\n- Add token revocation endpoint\n- Update API documentation\n\nBlocked by: Need security review from InfoSec team",
+    "assignee": "alex.rivera",
+    "due_date": "2025-10-10T23:59:59",
+    "labels": ["security", "api", "high-priority", "enterprise"],
+    "linked_pages": [
+      "OAuth 2.0 Implementation Guide",
+      "API Security Best Practices"
+    ]
+  },
+  {
+    "key": "ENG-124",
+    "summary": "Optimize Database Query Performance for Sales Dashboard",
+    "status": "Code Review",
+    "description": "Sales dashboard loading time increased from 2s to 12s after Q3 data was added. Need to optimize queries.\n\nFindings:\n- Missing indexes on sales_records table\n- N+1 query problem in regional aggregation\n- No caching for frequently accessed data\n\nProposed Solution:\n- Add composite indexes on (date, region, product)\n- Implement Redis caching for 1-hour TTL\n- Refactor aggregation queries to use materialized views",
+    "assignee": "jordan.kim",
+    "due_date": "2025-10-05T23:59:59",
+    "labels": ["performance", "database", "sales", "critical"],
+    "linked_pages": [
+      "Database Optimization Playbook",
+      "Caching Strategy Documentation"
+    ]
+  },
+  {
+    "key": "ENG-125",
+    "summary": "Create Automated Sales Report Generation Feature",
+    "status": "To Do",
+    "description": "Build scheduled report generation system that auto-generates sales reports every quarter.\n\nRequirements:\n- Fetch data from DynamoDB sales_records table\n- Generate PDF reports with charts and tables\n- Email reports to CFO and sales leadership\n- Support custom date ranges and filters\n- Store reports in S3 for audit trail\n\nRelated to CFO's urgent request for Q3 report.",
+    "assignee": "taylor.martinez",
+    "due_date": "2025-10-15T23:59:59",
+    "labels": ["feature", "reporting", "automation", "sales"],
+    "linked_pages": [
+      "Sales Report Template",
+      "DynamoDB Schema Documentation"
+    ]
+  },
+  {
+    "key": "ENG-126",
+    "summary": "Fix CI/CD Pipeline Timeout Issues",
+    "status": "In Progress",
+    "description": "CI/CD pipeline is timing out at 45 minutes. Need to reduce to <20 minutes target.\n\nCurrent bottlenecks:\n- Docker image build: 15 minutes\n- Unit tests: 18 minutes\n- Integration tests: 12 minutes\n\nOptimization ideas:\n- Use layer caching for Docker builds\n- Parallelize test suites\n- Use test result caching\n- Upgrade to larger GitHub Actions runners",
+    "assignee": "morgan.patel",
+    "due_date": "2025-10-08T23:59:59",
+    "labels": ["devops", "ci-cd", "technical-debt", "performance"],
+    "linked_pages": [
+      "CI/CD Optimization Guide",
+      "Docker Build Best Practices"
+    ]
+  }
+]

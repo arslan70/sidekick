@@ -1,0 +1,42 @@
+# StrandsAgents
+strands-agents>=1.10.0
+strands-agents-tools>=0.2.9
+
+# Bedrock AgentCore Runtime
+bedrock-agentcore>=1.0.0
+
+# AWS OpenTelemetry Distribution for AgentCore logging and tracing
+# This is required for AgentCore to capture logs and send them to CloudWatch
+aws-opentelemetry-distro>=0.10.1
+
+# Chainlit
+chainlit>=2.8.1
+
+# AWS SDK
+boto3>=1.40.0
+botocore>=1.40.0
+
+# AWS CDK (for infrastructure)
+aws-cdk-lib>=2.218.0
+constructs>=10.0.0
+
+# AWS CLI
+awscli>=1.42.41
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-mock>=3.11.0
+
+# Code Quality
+black>=25.9.0
+flake8>=7.3.0
+isort>=7.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+tenacity>=8.2.0
+
+# Health check endpoint
+flask>=3.0.0
