@@ -89,6 +89,8 @@ Priority: Fix database incident, then deliver Q3 report.
 | **Natural Language Parsing** | "Q3 2025" → precise DynamoDB date ranges | Users don't need to know query syntax |
 | **Guardrails Protection** | Bedrock Guardrails filter harmful/unrelated content | Blocks prompt injection, PII leakage, off-topic queries |
 
+> 📖 **Detailed Architecture:** See [AWS_SERVICES.md](AWS_SERVICES.md) for complete AWS service integration, cost breakdown, and creative service combinations.
+
 ---
 
 ## ⚡ What You Can Ask
