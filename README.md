@@ -91,31 +91,6 @@ Priority: Fix database incident, then deliver Q3 report.
 
 ---
 
-## 📁 Project Structure
-
-```
-sidekick/
-├── app/                    # Chainlit conversational UI
-├── agents/                 # Orchestrator + 7 worker agents
-│   ├── orchestrator.py     # Main coordinator (Nova Pro)
-│   ├── worker_calendar.py  # Calendar management
-│   ├── worker_email.py     # Email intelligence
-│   ├── worker_jira.py      # JIRA/Confluence (OAuth)
-│   ├── worker_incident.py  # Incident tracking
-│   ├── worker_aws.py       # AWS infrastructure (read-only)
-│   ├── worker_kb.py        # Knowledge Base (RAG)
-│   └── worker_report.py    # Report generation
-├── tools/                  # Service adapters
-├── infra/                  # AWS CDK stacks (3 stacks)
-├── configs/                # Agent configs + demo data
-│   ├── agentcore.yaml      # AgentCore runtime config
-│   └── kb_documents/       # Knowledge Base documents
-├── tests/                  # Unit tests
-└── scripts/                # Deployment & validation
-```
-
----
-
 ## ⚡ What You Can Ask
 
 | Query | Agents Used | What Happens |
