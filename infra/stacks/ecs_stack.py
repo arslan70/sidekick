@@ -208,6 +208,8 @@ class EcsStack(Stack):
             "AWS_REGION": self.region,
             "ENVIRONMENT": environment,
             "SERVICE_NAME": service_name,
+            # Chainlit authentication secret name for Secrets Manager
+            "CHAINLIT_AUTH_SECRET_NAME": f"{project_name}/{environment}/chainlit-auth",
         }
 
         # Add AgentCore configuration if provided

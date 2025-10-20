@@ -55,6 +55,23 @@ class AppConfigStack(Stack):
             ),
         )
 
+        # Create Secrets Manager secret for Chainlit authentication credentials
+        # Note: Password is auto-generated on first deployment for security
+        # Update the secret value after deployment using AWS CLI:
+        # aws secretsmanager update-secret --secret-id "sidekick/dev/chainlit-auth" \
+        #   --secret-string '{"demo_username": "demo", "demo_password": "your-password", "admin_username": "admin", "admin_password": ""}' \
+        #   --region eu-central-1
+        chainlit_auth_secret = secretsmanager.Secret(
+            self,
+            "ChainlitAuthSecret",
+            secret_name=f"{project_name}/{environment}/chainlit-auth",
+            description="Chainlit authentication credentials (demo and admin users)",
+            generate_secret_string=secretsmanager.SecretStringGenerator(
+                secret_string_template='{"demo_username": "demo", "admin_username": "admin"}',
+                generate_string_key="demo_password",
+            ),
+        )
+
         # Outputs
         CfnOutput(
             self,
@@ -78,8 +95,17 @@ class AppConfigStack(Stack):
             export_name=f"{project_name}-atlassian-secret-{environment}",
         )
 
-        # Store secret ARN for use in other stacks
+        CfnOutput(
+            self,
+            "ChainlitAuthSecretArn",
+            value=chainlit_auth_secret.secret_arn,
+            description="Secrets Manager ARN for Chainlit authentication",
+            export_name=f"{project_name}-chainlit-auth-secret-{environment}",
+        )
+
+        # Store secret ARNs for use in other stacks
         self.atlassian_secret = atlassian_secret
+        self.chainlit_auth_secret = chainlit_auth_secret
 
 
 """

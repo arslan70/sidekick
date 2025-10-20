@@ -32,7 +32,7 @@ class AgentCoreStack(Stack):
         environment = config["environment"]
         # AgentCore runtime name must match pattern: [a-zA-Z][a-zA-Z0-9_]{0,47}
         # Cannot contain hyphens, only underscores
-        agent_name = f"{project_name}_agent_{environment}"
+        agent_name = f"{project_name}_agent"
         # ECR repository name can have hyphens
         ecr_repo_name = f"{project_name}-agent-{environment}"
 
