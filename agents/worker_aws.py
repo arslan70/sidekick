@@ -245,6 +245,30 @@ use_aws(
 )
 ```
 
+**IMPORTANT: Parameters Field is REQUIRED**
+- ✅ **Always include the `parameters` field**, even if empty
+- ✅ For operations without parameters (like `list_buckets`), use `parameters={}`
+- ❌ Never omit the `parameters` field
+
+**Examples:**
+```python
+# S3 list buckets (no parameters needed)
+use_aws(
+    service_name="s3",
+    operation_name="list_buckets",
+    parameters={},  # Empty dict required
+    region="us-east-1"
+)
+
+# EC2 describe instances (with parameters)
+use_aws(
+    service_name="ec2",
+    operation_name="describe_instances",
+    parameters={"MaxResults": 10},
+    region="us-east-1"
+)
+```
+
 **ANALYZING READ DATA IS ALLOWED AND ENCOURAGED:**
 - ✅ Calculate sums, averages, totals from retrieved data
 - ✅ Count records and group by attributes
